@@ -1,0 +1,127 @@
+@charset "UTF-8";
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 62.5%;
+  color: #000;
+  line-height: 1.3;
+}
+
+h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+p, li, a {
+  font-size: 1.2rem;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  color: white;
+  background: linear-gradient(175deg, #FF79DA, #9356DC);
+  border: none;
+  height: 3rem;
+  border-radius: 1.5rem;
+  box-shadow: 2px 3px 8px 2px rgba(0, 0, 0, 0.2);
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  font-size: 1.1rem;
+}
+
+/* Eléments principaux de la page */
+body {
+  background: white;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+body > header {
+  text-align: center;
+}
+body > header img {
+  padding-bottom: 1rem;
+  padding-top: 1.5rem;
+  width: 60%;
+  max-width: 300px;
+}
+
+/* Localisation */
+.localisation {
+  background: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+}
+.localisation header {
+  display: flex;
+  flex-direction: row;
+  background: #EAEAEA;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0px 6px 5px -5px rgba(0, 0, 0, 0.2);
+}
+.localisation header i {
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+.localisation section {
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+/* Fonctionnement */
+.fonctionnement {
+  padding-left: 1.8rem;
+  padding-right: 1.8rem;
+}
+.fonctionnement ul {
+  padding-left: 1rem;
+}
+.fonctionnement ul li {
+  display: flex;
+  align-items: center;
+  background: #F6F6F6;
+  margin-bottom: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 2px 3px 8px 1px rgba(0, 0, 0, 0.2);
+}
+
+.fonctionnement i {
+  margin: 1.2rem;
+}
+
+.fonctionnement p:first-child {
+  /* numerotation */
+  background: #9356DC;
+  color: white;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  margin-left: -1rem;
+}
+
+/*# sourceMappingURL=style.css.map */

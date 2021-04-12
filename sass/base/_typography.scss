@@ -9,6 +9,7 @@ h1 {
     font-family: 'Shrikhand', sans-serif;
     font-weight: bold;
     font-size: 3rem;
+    font-weight: 100;
 }
 
 h2 {
@@ -34,14 +35,3 @@ li {
     list-style-type: none;
 }
 
-button {
-    color: white;
-    background: linear-gradient( 175deg, $colour-secondary, $colour-primary);
-    border: none;
-    height: 3rem;
-    border-radius: 1.5rem;
-    box-shadow: 2px 3px 8px 2px rgba(0, 0, 0, .2);
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
-    font-size: 1.1rem;
-}

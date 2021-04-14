@@ -57,9 +57,9 @@ body {
   padding-top: 1rem;
   font-size: 1.1rem;
 }
-
 .btn:hover {
   box-shadow: 2px 3px 8px 3px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(175deg, #ff93e1, #a16be0);
 }
 
 /* Header */

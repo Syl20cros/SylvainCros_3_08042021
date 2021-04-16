@@ -1,0 +1,26 @@
+/* FOOTER */
+.footer{
+    background: $colour-bg-footer;
+    nav{
+    padding-left: 1.8rem;
+    padding-right: 1.8rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    color: white;
+    &__header{
+        font-size: 1.6rem; 
+    }
+    }
+}
+.nav{
+    padding-left: 0rem;
+    &__link{
+        margin-bottom: 0.8rem;
+    }
+    i{
+        width: 1.8rem;
+    }
+    a{
+        color: white;
+    }
+}

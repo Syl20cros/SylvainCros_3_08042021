@@ -1,4 +1,14 @@
 @charset "UTF-8";
+/* Eléments principaux et communs de la page */
+body {
+  background: white;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  margin: auto;
+  max-width: 1024px;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-size: 62.5%;
@@ -33,16 +43,6 @@ a {
 
 li {
   list-style-type: none;
-}
-
-/* Eléments principaux et communs de la page */
-body {
-  background: white;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  margin: auto;
-  max-width: 1024px;
 }
 
 .btn {
@@ -118,6 +118,34 @@ body {
   padding-top: 1.5rem;
   width: 60%;
   max-width: 300px;
+}
+
+/* FOOTER */
+.footer {
+  background: #353535;
+}
+.footer nav {
+  padding-left: 1.8rem;
+  padding-right: 1.8rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  color: white;
+}
+.footer nav__header {
+  font-size: 1.6rem;
+}
+
+.nav {
+  padding-left: 0rem;
+}
+.nav__link {
+  margin-bottom: 0.8rem;
+}
+.nav i {
+  width: 1.8rem;
+}
+.nav a {
+  color: white;
 }
 
 /* Localisation */
@@ -202,12 +230,6 @@ body {
   padding-bottom: 2.5rem;
   background: #F6F6F6;
 }
-.restaurant img {
-  width: 100%;
-  height: 70%;
-  object-fit: cover;
-  border-radius: 1rem 1rem 0 0rem;
-}
 
 .preview {
   background: white;
@@ -219,6 +241,12 @@ body {
   margin-right: 0rem;
   transition: box-shadow 250ms;
   width: 100%;
+}
+.preview img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0rem;
 }
 .preview:hover {
   box-shadow: 2px 3px 8px 3px rgba(0, 0, 0, 0.4);
@@ -266,34 +294,6 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-color: rgba(255, 255, 255, 0);
-}
-
-/* FOOTER */
-.footer {
-  background: #353535;
-}
-.footer nav {
-  padding-left: 1.8rem;
-  padding-right: 1.8rem;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
-  color: white;
-}
-.footer nav__header {
-  font-size: 1.6rem;
-}
-
-.nav {
-  padding-left: 0rem;
-}
-.nav__link {
-  margin-bottom: 0.8rem;
-}
-.nav i {
-  width: 1.8rem;
-}
-.nav a {
-  color: white;
 }
 
 /*# sourceMappingURL=style.css.map */

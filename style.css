@@ -64,6 +64,20 @@ li {
   background: linear-gradient(175deg, #ffa2e5, #a978e3);
 }
 
+.like {
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: black;
+}
+.like:hover {
+  background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: rgba(255, 255, 255, 0);
+}
+
 /* loader */
 .loader {
   position: absolute;
@@ -87,7 +101,7 @@ li {
   height: 15rem;
   border-radius: 7.5rem;
   transform: translateY(-130%) scale(0);
-  transition: transform 2s;
+  transition: transform 1s;
 }
 .loader__container__moove h1 {
   display: flex;
@@ -98,7 +112,7 @@ li {
 
 .loader {
   opacity: 0;
-  animation: 2s hide 1;
+  animation: 1s hide 1;
 }
 
 @keyframes hide {
@@ -282,18 +296,38 @@ li {
   font-size: 1.5rem;
 }
 
-.like {
-  -webkit-text-fill-color: white;
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: black;
+.banner {
+  background: white;
+  border-radius: 1rem;
+  height: 280;
+  margin-bottom: 1.8rem;
+  margin-left: 0rem;
+  margin-right: 0rem;
+  width: 100%;
 }
-.like:hover {
-  background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-color: rgba(255, 255, 255, 0);
+.banner img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+}
+.banner__text {
+  background: #F6F6F6;
+  line-height: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 2rem;
+  border-radius: 3rem 3rem 0 0;
+  height: 8rem;
+}
+.banner__text h1 {
+  font-size: 2.5rem;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+.banner__text i {
+  font-size: 1.8rem;
 }
 
 /*# sourceMappingURL=style.css.map */

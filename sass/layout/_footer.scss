@@ -3,17 +3,18 @@
     background: $colour-bg-footer;
     padding-left: 1.8rem;
     padding-right: 1.8rem;
-    padding-top: 1rem;
+    padding-top: 1.5rem;
     color: white;
     &__header{
         font-size: 1.6rem; 
     }
-    
 }
+
 .nav{
     padding-left: 0rem;
     padding-bottom: 2rem;
-    color: white
+    color: white;
+    margin-top: 1.3rem;
     &__link{
         margin-bottom: 0.8rem;
     }

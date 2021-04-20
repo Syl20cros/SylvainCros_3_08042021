@@ -46,7 +46,7 @@
     align-items: center;
     padding-left: 1rem;
     padding-right: 1rem;
-    padding-bottom: 5rem;
+    padding-bottom: 3rem;
     h2{
         font-weight: initial;
         border-bottom:  $colour-tertiary 4px solid;
@@ -66,7 +66,7 @@
 .list-menu{
     padding-left: 0rem;
     width: 100%;
-    
+    margin-top: 1rem;
     &__text{
         background: white;
         border-radius: 1rem;
@@ -75,13 +75,19 @@
         justify-content: space-between;
         box-shadow: $box-shadow;
         transition: box-shadow 250ms;
+        padding-left: 1rem;
         &:hover{
             box-shadow: $box-shadow-hover;
+        }
+        &:hover  .list-menu__text__annimation__back{
+            transform: scaleX(1);
+        }
+        &:hover  .fa-check-circle{
+            transform: rotate(0turn);
         }
         &__annimation{
             display: flex;
         }
-        padding-left: 1rem;
         h3{
             margin: 0rem;
         }
@@ -107,16 +113,24 @@
         justify-content: center;
         align-items: flex-end;
         font-weight: bold;
-        
+    }
+    &__back{
+        background: $colour-tertiary;
+        width: 4.5rem;
+        border-radius: 0 1rem 1rem 0;
+        display: flex;
+        justify-content: center;
+        transform: scaleX(0);
+        transition: transform 300ms ease-in-out;
+        transform-origin: right 50%;
     }
     i{
-        background: $colour-tertiary;
         color: white;
-        width: 4.5rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 0 1rem 1rem 0;
         font-size: 1.5rem;
+        transform: rotate(-1turn);
+        transition: transform 300ms ease-in-out;
     }
 }

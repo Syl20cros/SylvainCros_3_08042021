@@ -123,7 +123,7 @@ li {
   height: 15rem;
   border-radius: 7.5rem;
   transform: translateY(-130%) scale(0);
-  transition: transform 1s;
+  transition: transform 2s;
 }
 .loader__container__moove h1 {
   display: flex;
@@ -133,16 +133,15 @@ li {
 }
 
 .loader {
-  opacity: 0;
-  animation: 1s hide 1;
+  animation: zipout 0s 2s both;
 }
 
-@keyframes hide {
-  0%, 80% {
-    opacity: 1;
+@keyframes zipout {
+  0% {
+    transform: translateX(0%);
   }
   100% {
-    opacity: 0;
+    transform: translateX(100%);
   }
 }
 /* Header */
@@ -382,7 +381,7 @@ li {
   align-items: center;
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-bottom: 5rem;
+  padding-bottom: 3rem;
 }
 .menu h2 {
   font-weight: initial;
@@ -402,6 +401,7 @@ li {
 .list-menu {
   padding-left: 0rem;
   width: 100%;
+  margin-top: 1rem;
 }
 .list-menu__text {
   background: white;
@@ -415,6 +415,12 @@ li {
 }
 .list-menu__text:hover {
   box-shadow: 2px 3px 8px 3px rgba(0, 0, 0, 0.4);
+}
+.list-menu__text:hover .list-menu__text__annimation__back {
+  transform: scaleX(1);
+}
+.list-menu__text:hover .fa-check-circle {
+  transform: rotate(0turn);
 }
 .list-menu__text__annimation {
   display: flex;
@@ -442,15 +448,24 @@ li {
   align-items: flex-end;
   font-weight: bold;
 }
-.list-menu .list-menu__text__annimation i {
+.list-menu .list-menu__text__annimation__back {
   background: #99E2D0;
-  color: white;
   width: 4.5rem;
+  border-radius: 0 1rem 1rem 0;
+  display: flex;
+  justify-content: center;
+  transform: scaleX(0);
+  transition: transform 300ms ease-in-out;
+  transform-origin: right 50%;
+}
+.list-menu .list-menu__text__annimation i {
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 0 1rem 1rem 0;
   font-size: 1.5rem;
+  transform: rotate(-1turn);
+  transition: transform 300ms ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */

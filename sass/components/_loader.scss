@@ -32,8 +32,15 @@
     }
 }
 
-.loader {opacity:0;animation:$time-loader hide 1 ;}
-@keyframes hide {
-0%,80% {opacity:1;}
-100% {opacity:0;}
+.loader {
+    animation:zipout 0s $time-loader  both;
+}
+
+@keyframes zipout{
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
 }

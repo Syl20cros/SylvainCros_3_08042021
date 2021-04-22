@@ -1,0 +1,19 @@
+{
+  "name": "p3",
+  "version": "1.0.0",
+  "description": "This is my \"projet 3\" for openClassroom",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/style.scss:./style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Syl20cros/SylvainCros_3_08042021.git"
+  },
+  "author": "Sylvain-CROS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Syl20cros/SylvainCros_3_08042021/issues"
+  },
+  "homepage": "https://github.com/Syl20cros/SylvainCros_3_08042021#readme"
+}

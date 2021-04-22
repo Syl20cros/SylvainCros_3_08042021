@@ -1,13 +1,24 @@
 /* Header */
-.header{
+.headerMenu{
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
     height: 6rem;
-    a{
-        display: flex;
+    &__back{
+        flex-grow: 1;
+        margin-left: 1rem;
+    }
+    &__title{
+        flex-grow: 1.5;
     }
     i{
         font-size: 1.5rem;
     }
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;   
 }

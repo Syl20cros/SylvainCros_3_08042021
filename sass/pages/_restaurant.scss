@@ -54,16 +54,17 @@
         padding-bottom: 0.4rem;
         font-size: 1.4rem;
     }
+    &__bloc{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-bottom: 1rem;
+    }
 }
 
-.bloc-menu{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding-bottom: 1rem;
-}
 
-.list-menu{
+
+.menu__bloc__list{
     padding-left: 0rem;
     width: 100%;
     margin-top: 1rem;
@@ -71,7 +72,8 @@
         background: white;
         border-radius: 1rem;
         margin-bottom: 1rem;
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 8.5rem;
         justify-content: space-between;
         box-shadow: $box-shadow;
         transition: box-shadow 250ms;
@@ -79,40 +81,45 @@
         &:hover{
             box-shadow: $box-shadow-hover;
         }
-        &:hover  .list-menu__text__annimation__back{
+        &:hover  .menu__bloc__list__text__annimation__back{
             transform: scaleX(1);
         }
         &:hover  .fa-check-circle{
             transform: rotate(0turn);
         }
-        &__annimation{
-            display: flex;
-        }
-        h3{
-            margin: 0rem;
-        }
-        span{
-            font-weight: bold;
+        &__title{
             font-size: 1.4rem;
+            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;;
+            grid-column: 1;
+            grid-row: 1;
         }
-        p{
+        &__text{
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
             line-height:1.8rem;
-            margin-block-start: 0.8em;
-            margin-block-end: 0.8em;
+            margin-bottom: 0.5em;
+            grid-column: 1;
+            grid-row: 2;
+        }
+        &__annimation{
+            grid-column: 2;
+            grid-row: 1 /span 2;
+            display: flex;
+            justify-content: flex-end;
         }
     }
 }
 
-.list-menu .list-menu__text__annimation{
-    p{
+.menu__bloc__list__text__annimation{
+    &__price{
         width: 4rem;
         display: flex;
         justify-content: center;
         align-items: flex-end;
         font-weight: bold;
+        margin-bottom: 0.7rem;
     }
     &__back{
         background: $colour-tertiary;
@@ -121,16 +128,16 @@
         display: flex;
         justify-content: center;
         transform: scaleX(0);
-        transition: transform 300ms ease-in-out;
+        transition: transform $time-check ease-in-out;
         transform-origin: right 50%;
-    }
-    i{
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.5rem;
-        transform: rotate(-1turn);
-        transition: transform 300ms ease-in-out;
+        &__ico{
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            transform: rotate(-1turn);
+            transition: transform $time-check ease-in-out;
+        }
     }
 }

@@ -6,10 +6,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-	<link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
-	<TITLE>ohmyfood</TITLE>
+	<link rel="stylesheet" href="style.css" />
+    <TITLE>ohmyfood</TITLE>
 </head>
 
 <body>
@@ -20,16 +20,15 @@
         </div>
     </div>
     
-
     <!-- Header --> 
     <header class="header">
-        <h1>ohmyfood</h1>
+        <h1 class="header__title">ohmyfood</h1>
     </header>
 
     <!-- Localisation -->
     <section class="location"> 
-            <i class="fas fa-map-marker-alt"></i>
-            <p><STRONG>Paris, Belleville</STRONG></p>
+            <i class="fas fa-map-marker-alt location__ico"></i>
+            <p class="location__text"><STRONG>Paris, Belleville</STRONG></p>
     </section> 
 
     <!-- Presentation -->
@@ -43,20 +42,26 @@
     <section class="fonctionnement">
         <h2>Fonctionnement</h2>
         <ul>
-            <li class="step">
-                <p class="step__num">1</p>
-                <i class="fas fa-mobile-alt step__ico"></i>
-                <p><a href="#">Choisisez un restaurant</a></p>
+            <li>
+                <a href="#" class="step">
+                    <p class="step__num">1</p>
+                    <i class="fas fa-mobile-alt step__ico"></i>
+                    <p class="step__text">Choisisez un restaurant</p>
+                </a>
             </li>
-            <li class="step">
-                <p class="step__num">2</p>
-                <i class="fas fa-list-ul step__ico"></i>
-                <p><a href="#">Composez votre menu</a></p>
+            <li>
+                <a href="#" class="step">
+                    <p class="step__num">2</p>
+                    <i class="fas fa-list-ul step__ico"></i>
+                    <p class="step__text">Composez votre menu</p>
+                </a>
             </li>
-            <li class="step step--color">
-                <p class="step__num">3</p>
-                <i class="fas fa-store step__ico step__ico--color"></i>
-                <p><a href="#">Dégustez au restaurant</a></p>
+            <li>
+                <a href="#" class="step">
+                    <p class="step__num">3</p>
+                    <i class="fas fa-store step__ico"></i>
+                    <p class="step__text">Dégustez au restaurant</p>
+                </a>
             </li>
         </ul>
     </section>
@@ -64,20 +69,19 @@
     <!-- Les restaurants -->
     <section class="restaurant">
         <h2>Restaurants</h2>
-        <a href="restaurant1.html">
-            <figure class="preview">
+        <a class="preview" href="restaurant1.html">
+            <p class="preview__new">Nouveau</p>
+            <figure class="preview__fig">
                 <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
                 alt="photo La palette du goût">
-                <figcaption class="preview__text">
-                    <div >
-                        <h3>La palette du goût</h3>
-                        <p>Ménilmontant</p>
+                <figcaption class="preview__fig__text">
+                    <h3 class="preview__fig__text__title">La palette du goût</h3>
+                    <p class="preview__fig__text__text">Ménilmontant</p>
+                    <div class="like">
+                        <i class="far fa-heart likeNotActive"></i>
+                        <i class="fas fa-heart likeActive"></i>
                     </div>
-                    <i class="fas fa-heart like"></i>
                 </figcaption>
-                <div class="preview__new-position">
-                    <p class="preview__new">Nouveau</p>
-                </div>
             </figure> 
         </a> 
         <a href="#" class="preview">
@@ -89,7 +93,10 @@
                         <h3>La note enchantée</h3>
                         <p>Charonne</p>
                     </div>
-                    <i class="fas fa-heart like"></i>
+                    <div class="like">
+                        <i class="far fa-heart likeNotActive"></i>
+                        <i class="fas fa-heart likeActive"></i>
+                    </div>
                 </figcaption>
                 <div class="preview__new-position">
                     <p class="preview__new">Nouveau</p>
@@ -105,7 +112,10 @@
                         <h3>À la française</h3>
                         <p>Cité Rouge</p>
                     </div>
-                    <i class="fas fa-heart like"></i>
+                    <div class="like">
+                        <i class="far fa-heart likeNotActive"></i>
+                        <i class="fas fa-heart likeActive"></i>
+                    </div>
                 </figcaption>
             </figure>
         </a>
@@ -118,7 +128,10 @@
                         <h3>Le délice des sens</h3>
                         <p>Folie-Méricourt</p>
                     </div>
-                    <i class="fas fa-heart like"></i>
+                    <div class="like">
+                        <i class="far fa-heart likeNotActive"></i>
+                        <i class="fas fa-heart likeActive"></i>
+                    </div>
                 </figcaption>
             </figure>
         </a>
@@ -127,15 +140,14 @@
     <!-- footer -->
     <footer class="footer">
         <h1 class="footer__header">ohmyfood</h1>
-        <nav> 
-            <ul class="nav">
-                <li class="nav__link"><a href="#"><i class="fas fa-utensils"></i> Proposer un restaurant</a></li>
-                <li class="nav__link"><a href="#"><i class="fas fa-hands-helping"></i> Devenir partenaire</a></li>
-                <li class="nav__link"><a href="#">Mentions légales</a></li>
-                <li class="nav__link"><a href="#">Contact</a></li>
+        <nav class="footer__nav"> 
+            <ul>
+                <li class="footer__nav__link"><a href="#"><i class="fas fa-utensils"></i> Proposer un restaurant</a></li>
+                <li class="footer__nav__link"><a href="#"><i class="fas fa-hands-helping"></i> Devenir partenaire</a></li>
+                <li class="footer__nav__link"><a href="#">Mentions légales</a></li>
+                <li class="footer__nav__link"><a href="#">Contact</a></li>
             </ul>
         </nav>
     </footer>
 </body>
-
 </html>

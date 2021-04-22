@@ -14,10 +14,9 @@
 
 <body>
     <!-- Header --> 
-    <header class="header">
-        <a href="index.html"><i class="fas fa-arrow-left"></i></a>
-        <h1>ohmyfood</h1>
-        <div></div>
+    <header class="headerMenu">
+        <a class="headerMenu__back" href="index.html"><i class="fas fa-arrow-left "></i></a>
+        <h1 class="headerMenu__title">ohmyfood</h1>
     </header>
 
     <!-- banner -->
@@ -25,53 +24,36 @@
         <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
         alt="photo La palette du goût">
         <figcaption class="banner__text">
-             <h1>La palette du goût</h1>
-            <i class="fas fa-heart like"></i>
+            <h1>La palette du goût</h1>
+            <div class="like">
+                <i class="far fa-heart likeNotActive"></i>
+                <i class="fas fa-heart likeActive"></i>
+            </div>
         </figcaption>
     </figure> 
 
     <!-- Menu -->
     <!-- Entrée -->
-    <main class="menu">  
-        <section class="bloc-menu">
-            <h2>ENTRÉES</h2>
-            <ul class="list-menu">
-                <li class="list-menu__text">
-                    <p><span>Fricassée d'escargot</span><br>
-                    Au piment d'Espelette</P>
-                    <div class="list-menu__text__annimation">
-                        <P>25€</P>
-                        <div class="list-menu__text__annimation__back">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                    </div>
-                </li>
-                <li class="list-menu__text">
-                    <p><span>Foie gras de canard mi-cuit</span><br>
-                        Et ses copeaux de truffe noire</P>
-                    <div class="list-menu__text__annimation">
-                        <P>35€</P>
-                        <div class="list-menu__text__annimation__back">
-                            <i class="fas fa-check-circle"></i>
+    <article class="menu">  
+        <section class="menu__bloc ">
+            <h2 class="menu__bloc__title">ENTRÉES</h2>
+            <ul class="menu__bloc__list">
+                <li class="menu__bloc__list__text">
+                    <h3 class="menu__bloc__list__text__title">Fricassée d'escargot</h3>
+                    <P class="menu__bloc__list__text__text">Au piment d'Espelette</P>
+                    <div class="menu__bloc__list__text__annimation">
+                        <P class="menu__bloc__list__text__annimation__price">25€</P>
+                        <div class="menu__bloc__list__text__annimation__back">
+                            <i class="fas fa-check-circle menu__bloc__list__text__annimation__back__ico"></i>
                         </div>
                     </div>
                 </li>
 
-                <li class="list-menu__text">
-                    <p><span>Oeuf au plat</span><br>
-                        Assaisonné à la truffe sur lit de caviar</P>
-                    <div class="list-menu__text__annimation">
-                        <P>20€</P>
-                        <div class="list-menu__text__annimation__back">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                    </div>
-                </li>
             </ul>
         </section>
 
         <!-- Plats -->
-        <section class="bloc-menu">
+        <section class="menu__bloc">
             <h2>PLATS</h2>
             <ul class="list-menu">
                 <li class="list-menu__text">
@@ -96,22 +78,22 @@
         </section>
 
         <!-- Desserts -->
-        <section class="bloc-menu">
+        <section class="menu__bloc">
             <h2>DESSERTS</h2>
-            <ul class="list-menu">
-                <li class="list-menu__text">
+            <ul class="menu__bloc__list">
+                <li class="menu__bloc__list__text">
                     <h3>Paris-Brest</h3>
                     <P>Revisité</P>
                     <P>18€</P>
                     <i class="fas fa-check-circle"></i>
                 </li>
-                <li class="list-menu__text">
+                <li class="menu__bloc__list__text">
                     <h3>Macaron au chocolat d'exception</h3>
                     <P>Et glace à la vanille de Madagascar</P>
                     <P>22€</P>
                     <i class="fas fa-check-circle"></i>
                 </li>
-                <li class="list-menu__text">
+                <li class="menu__bloc__list__text">
                     <h3>Mousse au chocolat</h3>
                     <P>Au piment d'Espelette et à la truffe noire</P>
                     <P>23€</P>
@@ -121,7 +103,7 @@
         </section>
 
         <button class="btn">Commander</button>
-    </main>
+    </article>
 
 
     <!-- footer -->

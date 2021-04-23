@@ -1,24 +1,19 @@
 /* Header */
-.headerHome{
-    display: flex;
-    justify-content: flex-start;
+.header{
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 1fr;
     align-items: center;
     height: 6rem;
     &__back{
-        flex-grow: 1;
         margin-left: 1rem;
+        grid-column: 1;
     }
     &__title{
-        flex-grow: 1.5;
+        grid-column: 2;
+        display: flex;
+        justify-content:center;
     }
     i{
         font-size: 1.5rem;
     }
-}
-
-.header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 6rem;   
 }

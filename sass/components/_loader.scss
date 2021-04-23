@@ -8,12 +8,16 @@
     background:$colour-primary;
     z-index: 200;
     &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         margin-left: auto;
         margin-right: auto;
         margin-top: 50%;
         width: 15rem;
         height: 15rem;
-        &__moove{
+        /*&__moove{
             background: $colour-secondary;
             width: 15rem;
             height: 15rem;
@@ -27,19 +31,54 @@
                 padding-top: 5.5rem;
                 font-size: 2.5rem;
             }
+        }*/
+        &__ring {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            &:after {
+                content: " ";
+                display: block;
+                width: 64px;
+                height: 64px;
+                margin: 8px;
+                border-radius: 50%;
+                border: 6px solid $colour-secondary;
+                border-color: $colour-secondary transparent $colour-secondary transparent;
+                animation: lds-dual-ring 1s linear infinite;
+            }
+          }
+        &__text{
+            margin-top: 1.2rem;
+            font-family: 'Shrikhand', sans-serif;
+            font-weight: bold;
+            font-size: 1.8rem;
+            font-weight: 100;
+            color: white;
         }
     }
 }
 
 .loader {
-    animation:zipout 0s $time-loader  both;
+    animation: hide-loader 0s $time-loader  both;
 }
 
-@keyframes zipout{
+@keyframes hide-loader{
     0% {
-        transform: translateX(0%);
+        z-index: 100;
+        opacity: 1;
     }
     100% {
-        transform: translateX(100%);
+        z-index: -100;
+        opacity: 0;
+    }
+}
+
+@keyframes lds-dual-ring {
+    0% {
+    transform: rotate(0deg);
+    }
+    100% {
+    transform: rotate(360deg);
     }
 }

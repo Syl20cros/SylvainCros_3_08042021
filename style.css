@@ -178,20 +178,20 @@ li {
   }
 }
 /* Header */
-.headerMenu {
+.headerHome {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   height: 6rem;
 }
-.headerMenu__back {
+.headerHome__back {
   flex-grow: 1;
   margin-left: 1rem;
 }
-.headerMenu__title {
+.headerHome__title {
   flex-grow: 1.5;
 }
-.headerMenu i {
+.headerHome i {
   font-size: 1.5rem;
 }
 
@@ -342,18 +342,26 @@ li {
 .preview__fig__text {
   line-height: 0.2;
   margin-top: 1.2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding-left: 1rem;
   padding-right: 1rem;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 2rem;
 }
 .preview__fig__text i {
   font-size: 1.6rem;
 }
-.preview__fig__text h3 {
+.preview__fig__text__title {
   margin-bottom: 1.5rem;
+  grid-column: 1;
+  grid-row: 1;
+}
+.preview__fig__text__description {
+  grid-column: 1;
+  grid-row: 2;
+}
+.preview__fig__text .like {
+  grid-column: 2;
+  grid-row: 1/span 2;
 }
 
 .preview__new {
@@ -442,28 +450,30 @@ li {
   background: white;
   border-radius: 1rem;
   margin-bottom: 1rem;
-  display: grid;
-  grid-template-columns: 1fr 8.5rem;
-  justify-content: space-between;
+  display: flex;
+  height: 5rem;
   box-shadow: 2px 3px 8px 1px rgba(0, 0, 0, 0.2);
   transition: box-shadow 250ms;
   padding-left: 1rem;
+  overflow: hidden;
 }
 .menu__bloc__list__text:hover {
   box-shadow: 2px 3px 8px 3px rgba(0, 0, 0, 0.4);
 }
-.menu__bloc__list__text:hover .menu__bloc__list__text__annimation__back {
-  transform: scaleX(1);
+.menu__bloc__list__text:hover .menu__bloc__list__text__annimation {
+  transform: translateX(-4.5rem);
 }
 .menu__bloc__list__text:hover .fa-check-circle {
   transform: rotate(0turn);
 }
 .menu__bloc__list__text__title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   font-size: 1.4rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
-  grid-column: 1;
-  grid-row: 1;
+  height: 2.5rem;
 }
 .menu__bloc__list__text__text {
   text-overflow: ellipsis;
@@ -471,14 +481,16 @@ li {
   overflow: hidden;
   line-height: 1.8rem;
   margin-bottom: 0.5em;
-  grid-column: 1;
-  grid-row: 2;
+  height: 2.5rem;
 }
 .menu__bloc__list__text__annimation {
-  grid-column: 2;
-  grid-row: 1/span 2;
+  margin-right: -4.5rem;
+  width: 8rem;
+  height: 5rem;
   display: flex;
   justify-content: flex-end;
+  transform: translateX(0rem);
+  transition: transform 300ms ease-in-out;
 }
 
 .menu__bloc__list__text__annimation__price {
@@ -495,8 +507,6 @@ li {
   border-radius: 0 1rem 1rem 0;
   display: flex;
   justify-content: center;
-  transform: scaleX(0);
-  transition: transform 300ms ease-in-out;
   transform-origin: right 50%;
 }
 .menu__bloc__list__text__annimation__back__ico {

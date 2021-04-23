@@ -116,17 +116,25 @@
     &__text{
         line-height: 0.2;
         margin-top: 1.2rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
         padding-left: 1rem;
         padding-right: 1rem;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr 2rem;
         i{
             font-size: 1.6rem;
         }
-        h3{
+        &__title{
             margin-bottom: 1.5rem;
+            grid-column: 1;
+            grid-row: 1;
+        }
+        &__description{
+            grid-column: 1;
+            grid-row: 2;
+        }
+        .like{
+            grid-column: 2;
+            grid-row: 1/ span 2;
         }
     }
 }

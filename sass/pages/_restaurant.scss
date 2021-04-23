@@ -68,31 +68,41 @@
     padding-left: 0rem;
     width: 100%;
     margin-top: 1rem;
+    
     &__text{
         background: white;
         border-radius: 1rem;
         margin-bottom: 1rem;
-        display: grid;
-        grid-template-columns: 1fr 8.5rem;
-        justify-content: space-between;
+        display: flex;
+        
+        height: 5rem;
+        //display: grid;
+        //grid-template-columns: 90% 8rem;
+        
         box-shadow: $box-shadow;
         transition: box-shadow 250ms;
         padding-left: 1rem;
+        overflow: hidden;
         &:hover{
             box-shadow: $box-shadow-hover;
         }
-        &:hover  .menu__bloc__list__text__annimation__back{
-            transform: scaleX(1);
+        &:hover  .menu__bloc__list__text__annimation{
+            transform: translateX(-4.5rem);
         }
         &:hover  .fa-check-circle{
             transform: rotate(0turn);
         }
         &__title{
+            
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
             font-size: 1.4rem;
             margin-top: 0.5rem;
             margin-bottom: 0.5rem;;
-            grid-column: 1;
-            grid-row: 1;
+            //grid-column: 1;
+            //grid-row: 1;
+            height: 2.5rem;
         }
         &__text{
             text-overflow: ellipsis;
@@ -100,14 +110,20 @@
             overflow: hidden;
             line-height:1.8rem;
             margin-bottom: 0.5em;
-            grid-column: 1;
-            grid-row: 2;
+            //grid-column: 1;
+            //grid-row: 2;
+            height: 2.5rem;
         }
         &__annimation{
-            grid-column: 2;
-            grid-row: 1 /span 2;
+            margin-right: -4.5rem;
+            width: 8rem;
+            height: 5rem;
+           // grid-column: 2;
+            //grid-row: 1 /span 2;
             display: flex;
             justify-content: flex-end;
+            transform: translateX(0rem);
+            transition: transform $time-check ease-in-out;
         }
     }
 }
@@ -127,8 +143,7 @@
         border-radius: 0 1rem 1rem 0;
         display: flex;
         justify-content: center;
-        transform: scaleX(0);
-        transition: transform $time-check ease-in-out;
+        
         transform-origin: right 50%;
         &__ico{
             color: white;

@@ -7,8 +7,8 @@
     box-shadow: $box-shadow;
     padding-right: 1.5rem;
     padding-left: 1.5rem;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
+    padding-bottom: 0.8rem;
+    padding-top: 0.8rem;
     font-size: 1.1rem;
     transition: box-shadow 250ms;
     &:hover {
@@ -18,32 +18,6 @@
         background: linear-gradient( 175deg, lighten($colour-secondary,8%), lighten($colour-primary,8%));
     }
 }
-
-/*
-.like{
-    -webkit-text-fill-color: rgba(255, 255, 255, 0);
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: black;
-    &:focus, &:hover, &:active{
-        cursor: pointer;
-        animation: fadein 1.5s;
-        background: linear-gradient(to bottom, $colour-primary 0%,$colour-secondary 100%);
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color:transparent;
-        -webkit-text-stroke-color: rgba(255, 255, 255, 0);
-    }
-}
-@keyframes fadein{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
-*/
 
 .like{
     height: 1rem;

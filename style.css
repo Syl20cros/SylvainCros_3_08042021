@@ -66,8 +66,8 @@ li {
   box-shadow: 2px 3px 8px 1px rgba(0, 0, 0, 0.2);
   padding-right: 1.5rem;
   padding-left: 1.5rem;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
+  padding-bottom: 0.8rem;
+  padding-top: 0.8rem;
   font-size: 1.1rem;
   transition: box-shadow 250ms;
 }
@@ -78,31 +78,6 @@ li {
   background: linear-gradient(175deg, #ffa2e5, #a978e3);
 }
 
-/*
-.like{
-    -webkit-text-fill-color: rgba(255, 255, 255, 0);
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: black;
-    &:focus, &:hover, &:active{
-        cursor: pointer;
-        animation: fadein 1.5s;
-        background: linear-gradient(to bottom, $colour-primary 0%,$colour-secondary 100%);
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color:transparent;
-        -webkit-text-stroke-color: rgba(255, 255, 255, 0);
-    }
-}
-@keyframes fadein{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
-*/
 .like {
   height: 1rem;
   position: relative;
@@ -517,6 +492,10 @@ li {
 .menu__bloc__list__text:hover .fa-check-circle {
   transform: rotate(0turn);
 }
+.menu__bloc__list__text:hover .menu__bloc__list__text__descip {
+  padding-right: 4.5rem;
+  transition: 300ms ease-in-out;
+}
 .menu__bloc__list__text__annimation {
   margin-right: -4.5rem;
   width: 8rem;
@@ -524,6 +503,10 @@ li {
   display: flex;
   justify-content: flex-end;
   transform: translateX(0rem);
+  transition: transform 300ms ease-in-out;
+}
+.menu__bloc__list__text__descip {
+  margin-right: 0rem;
   transition: transform 300ms ease-in-out;
 }
 
@@ -550,7 +533,7 @@ li {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   width: 100%;
@@ -560,8 +543,8 @@ li {
   white-space: nowrap;
   overflow: hidden;
   width: 100%;
-  margin-bottom: 0.5rem;
-  margin-top: 0.5rem;
+  font-size: 1.4rem;
+  margin-top: 0.8rem;
 }
 
 .menu__bloc__list__text__annimation__price {
@@ -570,7 +553,7 @@ li {
   justify-content: center;
   align-items: flex-end;
   font-weight: bold;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.5rem;
 }
 .menu__bloc__list__text__annimation__back {
   background: #99E2D0;

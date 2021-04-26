@@ -73,8 +73,6 @@
         display: flex;
         justify-content: space-between;
         height: 5rem;
-        //display: grid;
-        //grid-template-columns: 90% 8rem;
         box-shadow: $box-shadow;
         transition: box-shadow 250ms;
         padding-left: 1rem;
@@ -85,20 +83,26 @@
             box-shadow: $box-shadow-hover;
         }
         &:hover  .menu__bloc__list__text__annimation{
-            transform: translateX(-4.5rem);
+            transform: translateX(-$valid-translate);
         }
         &:hover  .fa-check-circle{
             transform: rotate(0turn);
         }
+        &:hover  .menu__bloc__list__text__descip{
+            padding-right: $valid-translate;
+            transition: $time-check ease-in-out;
+        }
         &__annimation{
-            margin-right: -4.5rem;
+            margin-right: -$valid-translate;
             width: 8rem;
             height: 5rem;
-           // grid-column: 2;
-            //grid-row: 1 /span 2;
             display: flex;
             justify-content: flex-end;
             transform: translateX(0rem);
+            transition: transform $time-check ease-in-out;
+        }
+        &__descip{
+            margin-right: 0rem;
             transition: transform $time-check ease-in-out;
         }
     }
@@ -123,11 +127,9 @@
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
-        //grid-column: 1;
-        //grid-row: 1;
         width: 100%;
     }
     &__title{
@@ -135,10 +137,8 @@
         white-space: nowrap;
         overflow: hidden;
         width: 100%;
-        margin-bottom: 0.5rem;
-        margin-top: 0.5rem;
-        //grid-column: 1;
-        //grid-row: 2;
+        font-size: 1.4rem;
+        margin-top: 0.8rem;
     }
 }
 
@@ -149,7 +149,8 @@
         justify-content: center;
         align-items: flex-end;
         font-weight: bold;
-        margin-bottom: 0.7rem;
+        margin-bottom: 0.5rem;
+        
     }
     &__back{
         background: $colour-tertiary;

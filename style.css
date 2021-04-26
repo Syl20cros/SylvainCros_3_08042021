@@ -500,11 +500,13 @@ li {
   border-radius: 1rem;
   margin-bottom: 1rem;
   display: flex;
+  justify-content: space-between;
   height: 5rem;
   box-shadow: 2px 3px 8px 1px rgba(0, 0, 0, 0.2);
   transition: box-shadow 250ms;
   padding-left: 1rem;
   overflow: hidden;
+  opacity: 0;
 }
 .menu__bloc__list__text:hover {
   box-shadow: 2px 3px 8px 3px rgba(0, 0, 0, 0.4);
@@ -515,23 +517,6 @@ li {
 .menu__bloc__list__text:hover .fa-check-circle {
   transform: rotate(0turn);
 }
-.menu__bloc__list__text__title {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  font-size: 1.4rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  height: 2.5rem;
-}
-.menu__bloc__list__text__text {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  line-height: 1.8rem;
-  margin-bottom: 0.5em;
-  height: 2.5rem;
-}
 .menu__bloc__list__text__annimation {
   margin-right: -4.5rem;
   width: 8rem;
@@ -540,6 +525,43 @@ li {
   justify-content: flex-end;
   transform: translateX(0rem);
   transition: transform 300ms ease-in-out;
+}
+
+.menu__bloc__list__text--load1 {
+  animation: loadtext 300ms linear forwards 100ms;
+}
+
+.menu__bloc__list__text--load2 {
+  animation: loadtext 300ms linear forwards 200ms;
+}
+
+.menu__bloc__list__text--load3 {
+  animation: loadtext 300ms linear forwards 300ms;
+}
+
+.menu__bloc__list__text--load4 {
+  animation: loadtext 300ms linear forwards 400ms;
+}
+
+.menu__bloc__list__text__descip {
+  width: 80%;
+}
+.menu__bloc__list__text__descip__text {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 1.4rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+.menu__bloc__list__text__descip__title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .menu__bloc__list__text__annimation__price {
@@ -566,6 +588,17 @@ li {
   font-size: 1.5rem;
   transform: rotate(-1turn);
   transition: transform 300ms ease-in-out;
+}
+
+@keyframes loadtext {
+  0% {
+    opacity: 0;
+    margin-top: -1rem;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

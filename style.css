@@ -291,6 +291,7 @@ li {
 .step:hover {
   cursor: pointer;
   box-shadow: 2px 3px 8px 3px rgba(0, 0, 0, 0.4);
+  background: #ece1f9;
 }
 .step:hover .step__ico {
   color: #9356DC;
@@ -381,6 +382,7 @@ li {
   grid-column: 2;
   grid-row: 1;
   background: #99E2D0;
+  border-radius: 3px;
   color: #278870;
   width: 6rem;
   padding: 0.4rem;
@@ -402,7 +404,6 @@ li {
 .banner {
   background: white;
   border-radius: 1rem;
-  height: 360px;
   margin-top: initial;
   margin-left: 0rem;
   margin-right: 0rem;
@@ -468,7 +469,6 @@ li {
   margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;
-  height: 5rem;
   box-shadow: 2px 3px 8px 1px rgba(0, 0, 0, 0.2);
   transition: box-shadow 250ms;
   padding-left: 1rem;
@@ -488,6 +488,12 @@ li {
 .menu__bloc__list__text:hover .menu__bloc__list__text__descip {
   padding-right: 4.5rem;
   transition: 300ms ease-in-out;
+}
+.menu__bloc__list__text:hover .menu__bloc__list__text__descip__text {
+  white-space: nowrap;
+}
+.menu__bloc__list__text:hover .menu__bloc__list__text__descip__title {
+  white-space: nowrap;
 }
 .menu__bloc__list__text__annimation {
   margin-right: -4.5rem;
@@ -524,7 +530,6 @@ li {
 }
 .menu__bloc__list__text__descip__text {
   text-overflow: ellipsis;
-  white-space: nowrap;
   overflow: hidden;
   font-size: 1.2rem;
   margin-top: 0.5rem;
@@ -533,7 +538,6 @@ li {
 }
 .menu__bloc__list__text__descip__title {
   text-overflow: ellipsis;
-  white-space: nowrap;
   overflow: hidden;
   width: 100%;
   font-size: 1.4rem;

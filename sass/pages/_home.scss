@@ -55,6 +55,7 @@
     &:hover{
         cursor: pointer;
         box-shadow: $box-shadow-hover;
+        background: lighten($colour-primary,33%)
     }
 
     &:hover .step__ico{
@@ -150,6 +151,7 @@
     grid-column: 2;
     grid-row: 1;
     background: $colour-tertiary;
+    border-radius: 3px;
     color: darken($colour-tertiary,40%);
     width: 6rem;
     padding: 0.4rem;

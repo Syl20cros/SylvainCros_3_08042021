@@ -5,7 +5,7 @@
 .banner{
     background: white;
     border-radius: 1rem;
-    height: 360px;
+    //max-height: 360px;
     margin-top: initial;
     margin-left: 0rem;
     margin-right: 0rem;
@@ -63,14 +63,12 @@
     padding-left: 0rem;
     width: 100%;
     margin-top: 1rem;
-    
     &__text{
         background: white;
         border-radius: 1rem;
         margin-bottom: 1rem;
         display: flex;
         justify-content: space-between;
-        height: 5rem;
         box-shadow: $box-shadow;
         transition: box-shadow 250ms;
         padding-left: 1rem;
@@ -90,6 +88,12 @@
         &:hover  .menu__bloc__list__text__descip{
             padding-right: $valid-translate;
             transition: $time-check ease-in-out;
+        }
+        &:hover  .menu__bloc__list__text__descip__text{
+            white-space: nowrap;
+        }
+        &:hover  .menu__bloc__list__text__descip__title{
+            white-space: nowrap;
         }
         &__annimation{
             margin-right: -$valid-translate;
@@ -124,7 +128,6 @@
     width: 80%;
     &__text{
         text-overflow: ellipsis;
-        white-space: nowrap;
         overflow: hidden;
         font-size: 1.2rem;
         margin-top: 0.5rem;
@@ -133,7 +136,6 @@
     }
     &__title{
         text-overflow: ellipsis;
-        white-space: nowrap;
         overflow: hidden;
         width: 100%;
         font-size: 1.4rem;

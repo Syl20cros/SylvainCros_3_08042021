@@ -91,7 +91,6 @@ li {
   background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
   -webkit-background-clip: text;
   -moz-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-color: rgba(255, 255, 255, 0);
   opacity: 0;
@@ -171,7 +170,7 @@ li {
 }
 
 .loader {
-  animation: hide-loader 0s 1s both;
+  animation: hide-loader 0s 2s both;
 }
 
 @keyframes hide-loader {
@@ -267,7 +266,6 @@ li {
 .presentation__header {
   max-width: 80%;
   font-size: 2rem;
-  margin-block-end: 0em;
   margin-bottom: 1rem;
 }
 .presentation__text {
@@ -293,9 +291,10 @@ li {
   margin-bottom: 1.5rem;
   border-radius: 1rem;
   box-shadow: 2px 3px 8px 1px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 250ms;
 }
 .step:hover {
-  background: #f2eafb;
+  cursor: pointer;
   box-shadow: 2px 3px 8px 3px rgba(0, 0, 0, 0.4);
 }
 .step:hover .step__ico {
@@ -408,7 +407,7 @@ li {
 .banner {
   background: white;
   border-radius: 1rem;
-  height: 280;
+  height: 360px;
   margin-top: initial;
   margin-left: 0rem;
   margin-right: 0rem;
@@ -435,8 +434,6 @@ li {
 }
 .banner__text h1 {
   font-size: 2.1rem;
-  margin-block-start: 0em;
-  margin-block-end: 0em;
 }
 .banner__text i {
   font-size: 1.8rem;
@@ -484,6 +481,7 @@ li {
   opacity: 0;
 }
 .menu__bloc__list__text:hover {
+  cursor: pointer;
   box-shadow: 2px 3px 8px 3px rgba(0, 0, 0, 0.4);
 }
 .menu__bloc__list__text:hover .menu__bloc__list__text__annimation {

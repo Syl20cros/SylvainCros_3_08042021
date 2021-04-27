@@ -25,7 +25,6 @@
     &__header{
         max-width: 80%;
         font-size: 2rem;
-        margin-block-end: 0em;
         margin-bottom: 1rem;
     }
     &__text{
@@ -52,8 +51,9 @@
     margin-bottom: 1.5rem;
     border-radius: 1rem;
     box-shadow: $box-shadow;
+    transition: box-shadow 250ms;
     &:hover{
-        background: lighten($colour-primary, 35%);
+        cursor: pointer;
         box-shadow: $box-shadow-hover;
     }
 

@@ -1,15 +1,25 @@
-$colour-primary: #9356DC;
-$colour-secondary: #FF79DA;
-$colour-tertiary: #99E2D0;
-$colour-bg: #F6F6F6;
-$colour-bg-secondary: #EAEAEA;
+//Colors
+$colour-primary: #9356dc;
+$colour-secondary: #ff79da;
+$colour-tertiary: #99e2d0;
+$colour-bg: #f6f6f6;
+$colour-bg-secondary: #eaeaea;
 $colour-bg-footer: #353535;
-$color-Btn-gradient: linear-gradient( 175deg, $colour-secondary, $colour-primary);
+$color-Btn-gradient: linear-gradient(
+  175deg,
+  $colour-secondary,
+  $colour-primary
+);
 
-$box-shadow: 2px 3px 8px 1px rgba(0, 0, 0, .2);
-$box-shadow-hover: 2px 3px 8px 3px rgba(0, 0, 0, .4);
+//shadows
+$box-shadow: 2px 3px 8px 1px rgba(0, 0, 0, 0.2);
+$box-shadow-hover: 2px 3px 8px 3px rgba(0, 0, 0, 0.4);
 
-$time-loader: 2s;
-$time-check: 300ms;
+//times
+$time-loader: 2s; //time of loader annimation
+$time-check: 300ms; //time of check annimation
+$time-menu-display: 300ms; //time of display menu annimation
+$time-like: 300ms; //time of like annimation
 
-$valid-translate: 4.5rem;
+//length
+$valid-translate: 4.5rem; //length oh check annimation

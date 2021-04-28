@@ -1,51 +1,60 @@
 .btn {
-    color: white;
-    background: $color-Btn-gradient;
-    border: none;
-    height: 3rem;
-    border-radius: 1.5rem;
-    box-shadow: $box-shadow;
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
-    padding-bottom: 0.8rem;
-    padding-top: 0.8rem;
-    font-size: 1.1rem;
-    transition: box-shadow 250ms;
-    &:hover {
-        outline-style: none;
-        cursor: pointer;
-        box-shadow: $box-shadow-hover;
-        background: linear-gradient( 175deg, lighten($colour-secondary,8%), lighten($colour-primary,8%));
-    }
+  color: white;
+  background: $color-Btn-gradient;
+  border: none;
+  height: 3rem;
+  border-radius: 1.5rem;
+  box-shadow: $box-shadow;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  padding-bottom: 0.8rem;
+  padding-top: 0.8rem;
+  font-size: 1.1rem;
+  transition: box-shadow 250ms;
+  &:hover {
+    outline-style: none;
+    cursor: pointer;
+    box-shadow: $box-shadow-hover;
+    background: linear-gradient(
+      175deg,
+      lighten($colour-secondary, 8%),
+      lighten($colour-primary, 8%)
+    );
+  }
 }
 
-.like{
-    height: 1rem;
-    position: relative;
-    &:hover .likeNotActive {
-    opacity: 0; 
+.like {
+  height: 1rem;
+  position: relative;
+  &:hover .like-border {
+    opacity: 0;
+  }
+  .like-color {
+    position: absolute;
+    left: 0;
+    background: linear-gradient(
+      to bottom,
+      $colour-primary 0%,
+      $colour-secondary 100%
+    );
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0);
+    opacity: 0;
+    transition: opacity $time-like ease-in-out;
+    &:focus,
+    &:hover,
+    &:active {
+      cursor: pointer;
+      opacity: 1;
     }
-    .likeActive{
-        position: absolute;
-        left: 0;
-        background: linear-gradient(to bottom, $colour-primary 0%,$colour-secondary 100%);
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        
-        -webkit-text-fill-color:transparent;
-        -webkit-text-stroke-color: rgba(255, 255, 255, 0);
-        opacity: 0;
-        transition: opacity 300ms;
-        &:focus, &:hover, &:active{
-            cursor: pointer;
-            opacity: 1;
-        }
-        &:hover .likeNotActive {
-            opacity: 0;
-        }
+    &:hover .like-border {
+      opacity: 0;
     }
-    .likeNotActive{
-        opacity: 1;
-        transition: opacity 250ms;
-    }
+  }
+  .like-border {
+    opacity: 1;
+    transition: opacity $time-like ease-in-out;
+  }
 }

@@ -44,7 +44,9 @@ h3 {
   font-size: 1.4rem;
 }
 
-p, li, a {
+p,
+li,
+a {
   font-size: 1.2rem;
 }
 
@@ -78,16 +80,24 @@ li {
 @keyframes loadtext {
   0% {
     opacity: 0;
-    margin-top: -1rem;
+    margin-top: 1rem;
   }
   100% {
     opacity: 1;
     margin-top: 0rem;
   }
 }
+@keyframes hide-home {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 1000rem;
+  }
+}
 .btn {
   color: white;
-  background: linear-gradient(175deg, #FF79DA, #9356DC);
+  background: linear-gradient(175deg, #ff79da, #9356dc);
   border: none;
   height: 3rem;
   border-radius: 1.5rem;
@@ -110,41 +120,51 @@ li {
   height: 1rem;
   position: relative;
 }
-.like:hover .likeNotActive {
+.like:hover .like-border {
   opacity: 0;
 }
-.like .likeActive {
+.like .like-color {
   position: absolute;
   left: 0;
-  background: linear-gradient(to bottom, #9356DC 0%, #FF79DA 100%);
+  background: linear-gradient(to bottom, #9356dc 0%, #ff79da 100%);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-color: rgba(255, 255, 255, 0);
   opacity: 0;
-  transition: opacity 300ms;
+  transition: opacity 300ms ease-in-out;
 }
-.like .likeActive:focus, .like .likeActive:hover, .like .likeActive:active {
+.like .like-color:focus, .like .like-color:hover, .like .like-color:active {
   cursor: pointer;
   opacity: 1;
 }
-.like .likeActive:hover .likeNotActive {
+.like .like-color:hover .like-border {
   opacity: 0;
 }
-.like .likeNotActive {
+.like .like-border {
   opacity: 1;
-  transition: opacity 250ms;
+  transition: opacity 300ms ease-in-out;
 }
 
 /* loader */
+header, .location, .presentation, .fonctionnement, .restaurant, footer {
+  max-height: 0;
+  overflow: hidden;
+  animation: hide-home 1s 2s forwards;
+}
+
 .loader {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: #9356DC;
+  background: #9356dc;
   z-index: 200;
+  animation: hide-loader 0s 2s both;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .loader__container {
   display: flex;
@@ -153,7 +173,6 @@ li {
   align-items: center;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50%;
   width: 15rem;
   height: 15rem;
 }
@@ -169,8 +188,8 @@ li {
   height: 64px;
   margin: 8px;
   border-radius: 50%;
-  border: 6px solid #FF79DA;
-  border-color: #FF79DA transparent #FF79DA transparent;
+  border: 6px solid #ff79da;
+  border-color: #ff79da transparent #ff79da transparent;
   animation: lds-dual-ring 1s linear infinite;
 }
 .loader__container__text {
@@ -180,10 +199,6 @@ li {
   font-size: 1.8rem;
   font-weight: 100;
   color: white;
-}
-
-.loader {
-  animation: hide-loader 0s 2s both;
 }
 
 /* Header */
@@ -235,7 +250,7 @@ li {
 
 /* Localisation */
 .location {
-  background: #EAEAEA;
+  background: #eaeaea;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -249,7 +264,7 @@ li {
 
 /* Presentation */
 .presentation {
-  background: #F6F6F6;
+  background: #f6f6f6;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -281,7 +296,7 @@ li {
 .step {
   display: flex;
   align-items: center;
-  background: #F6F6F6;
+  background: #f6f6f6;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   border-radius: 1rem;
@@ -294,14 +309,14 @@ li {
   background: #ece1f9;
 }
 .step:hover .step__ico {
-  color: #9356DC;
+  color: #9356dc;
 }
 .step__ico {
   margin: 1.2rem;
   color: #777777;
 }
 .step__num {
-  background: #9356DC;
+  background: #9356dc;
   color: white;
   height: 2rem;
   width: 2rem;
@@ -319,7 +334,7 @@ li {
   padding-right: 1.8rem;
   padding-top: 2.2rem;
   padding-bottom: 2.5rem;
-  background: #F6F6F6;
+  background: #f6f6f6;
 }
 .restaurant__title {
   margin-bottom: 1.5rem;
@@ -381,7 +396,7 @@ li {
 .preview__new {
   grid-column: 2;
   grid-row: 1;
-  background: #99E2D0;
+  background: #99e2d0;
   border-radius: 3px;
   color: #278870;
   width: 6rem;
@@ -393,7 +408,7 @@ li {
   right: 3rem;
 }
 
-.preview__new--notShow {
+.preview__new--not-show {
   display: none;
 }
 
@@ -417,7 +432,7 @@ li {
 
 .banner__text {
   margin-top: -3rem;
-  background: #F6F6F6;
+  background: #f6f6f6;
   line-height: 2.5rem;
   display: flex;
   justify-content: space-between;
@@ -436,7 +451,7 @@ li {
 }
 
 .menu {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -446,7 +461,7 @@ li {
 }
 .menu h2 {
   font-weight: initial;
-  border-bottom: #99E2D0 4px solid;
+  border-bottom: #99e2d0 4px solid;
   width: 3.5rem;
   padding-bottom: 0.4rem;
   font-size: 1.4rem;
@@ -553,7 +568,7 @@ li {
   margin-bottom: 0.5rem;
 }
 .menu__bloc__list__text__annimation__back {
-  background: #99E2D0;
+  background: #99e2d0;
   width: 4.5rem;
   border-radius: 0 1rem 1rem 0;
   display: flex;

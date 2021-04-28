@@ -83,7 +83,8 @@
       transform: translateX(-$valid-translate);
     }
     &:hover .fa-check-circle {
-      transform: rotate(0turn);
+      transform: rotate(1turn);
+      transition: transform  $time-check 100ms ease-in-out;
     }
     &:hover .menu__bloc__list__text__descip {
       padding-right: $valid-translate;

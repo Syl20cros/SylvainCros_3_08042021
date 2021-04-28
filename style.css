@@ -124,6 +124,7 @@ li {
   opacity: 0;
 }
 .like .like-color {
+  opacity: 0;
   position: absolute;
   left: 0;
   background: linear-gradient(to bottom, #9356dc 0%, #ff79da 100%);
@@ -131,8 +132,6 @@ li {
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-color: rgba(255, 255, 255, 0);
-  opacity: 0;
-  transition: opacity 300ms ease-in-out;
 }
 .like .like-color:focus, .like .like-color:hover, .like .like-color:active {
   cursor: pointer;
@@ -147,7 +146,7 @@ li {
 }
 
 /* loader */
-header, .location, .presentation, .fonctionnement, .restaurant, footer {
+.location, .presentation, .fonctionnement, .restaurant {
   max-height: 0;
   overflow: hidden;
   animation: hide-home 1s 2s forwards;
@@ -427,6 +426,7 @@ header, .location, .presentation, .fonctionnement, .restaurant, footer {
 .banner img {
   width: 100%;
   height: 70%;
+  max-height: 360px;
   object-fit: cover;
 }
 

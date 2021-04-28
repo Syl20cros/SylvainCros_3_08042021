@@ -1,7 +1,7 @@
 /* loader */
 
 //hide home during loader
-header, .location, .presentation, .fonctionnement, .restaurant, footer{
+.location, .presentation, .fonctionnement, .restaurant{
   max-height: 0;
   overflow: hidden;
   animation: hide-home 1s $time-loader forwards;

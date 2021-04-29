@@ -74,26 +74,38 @@
     padding-left: 1rem;
     overflow: hidden;
     opacity: 0;
-
+    &:active,
+    &:focus,
     &:hover {
       cursor: pointer;
       box-shadow: $box-shadow-hover;
     }
+
+    &:active .menu__bloc__list__text__annimation,
+    &:focus .menu__bloc__list__text__annimation,
     &:hover .menu__bloc__list__text__annimation {
       transform: translateX(-$valid-translate);
     }
-    &:hover .fa-check-circle {
+    &:hover .fa-check-circle,
+    &:active .fa-check-circle,
+    &:focus .fa-check-circle {
       transform: rotate(1turn);
       transition: transform  $time-check 100ms ease-in-out;
     }
-    &:hover .menu__bloc__list__text__descip {
+    &:hover .menu__bloc__list__text__descip,
+    &:focus .menu__bloc__list__text__descip,
+    &:active .menu__bloc__list__text__descip {
       padding-right: $valid-translate;
       transition: $time-check ease-in-out;
     }
-    &:hover .menu__bloc__list__text__descip__text {
+    &:hover .menu__bloc__list__text__descip__text,
+    &:active .menu__bloc__list__text__descip__text,
+    &:focus .menu__bloc__list__text__descip__text {
       white-space: nowrap;
     }
-    &:hover .menu__bloc__list__text__descip__title {
+    &:hover .menu__bloc__list__text__descip__title,
+    &:active .menu__bloc__list__text__descip__title,
+    &:focus .menu__bloc__list__text__descip__title {
       white-space: nowrap;
     }
     &__annimation {

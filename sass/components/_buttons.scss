@@ -11,7 +11,9 @@
   padding-top: 0.8rem;
   font-size: 1.1rem;
   transition: box-shadow 250ms;
-  &:hover {
+  &:focus,
+  &:hover,
+  &:active {
     outline-style: none;
     cursor: pointer;
     box-shadow: $box-shadow-hover;
@@ -26,10 +28,14 @@
 .like {
   height: 1rem;
   position: relative;
-  &:hover .like-border {
+  &:hover .like-border, 
+  &:focus .like-border,
+  &:active .like-border{
     opacity: 0;
   }
-  &:hover .like-color {
+  &:hover .like-color,
+  &:focus .like-color,
+  &:active .like-color {
   transition: opacity $time-like ease-in-out;
   }
   .like-color {

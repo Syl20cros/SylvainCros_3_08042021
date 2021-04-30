@@ -1,7 +1,10 @@
 /* loader */
 
 //hide home during loader
-.location, .presentation, .fonctionnement, .restaurant{
+.location,
+.presentation,
+.fonctionnement,
+.restaurant {
   max-height: 0;
   overflow: hidden;
   animation: hide-home 1s $time-loader forwards;
@@ -40,9 +43,8 @@
         margin: 8px;
         border-radius: 50%;
         border: 6px solid $colour-secondary;
-        border-color: $colour-secondary transparent $colour-secondary
-          transparent;
-        animation: lds-dual-ring 1s linear infinite;
+        border-color: $colour-secondary transparent $colour-secondary transparent;
+        animation: dual-ring 1s linear infinite;
       }
     }
     &__text {
@@ -55,4 +57,3 @@
     }
   }
 }
-

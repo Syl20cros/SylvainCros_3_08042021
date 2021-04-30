@@ -69,9 +69,12 @@ li {
     opacity: 0;
   }
 }
-@keyframes lds-dual-ring {
+@keyframes dual-ring {
   0% {
     transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(280deg);
   }
   100% {
     transform: rotate(360deg);
@@ -146,10 +149,13 @@ li {
 }
 
 /* loader */
-.location, .presentation, .fonctionnement, .restaurant {
+.location,
+.presentation,
+.fonctionnement,
+.restaurant {
   max-height: 0;
   overflow: hidden;
-  animation: hide-home 1s 2s forwards;
+  animation: hide-home 1s 1.5s forwards;
 }
 
 .loader {
@@ -160,7 +166,7 @@ li {
   height: 100%;
   background: #9356dc;
   z-index: 200;
-  animation: hide-loader 0s 2s both;
+  animation: hide-loader 0s 1.5s both;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -189,7 +195,7 @@ li {
   border-radius: 50%;
   border: 6px solid #ff79da;
   border-color: #ff79da transparent #ff79da transparent;
-  animation: lds-dual-ring 1s linear infinite;
+  animation: dual-ring 1s linear infinite;
 }
 .loader__container__text {
   margin-top: 1.2rem;
@@ -499,11 +505,11 @@ li {
 }
 .menu__bloc__list__text:hover .fa-check-circle, .menu__bloc__list__text:active .fa-check-circle, .menu__bloc__list__text:focus .fa-check-circle {
   transform: rotate(1turn);
-  transition: transform 800ms 100ms ease-in-out;
+  transition: transform 500ms 100ms ease-in-out;
 }
 .menu__bloc__list__text:hover .menu__bloc__list__text__descip, .menu__bloc__list__text:focus .menu__bloc__list__text__descip, .menu__bloc__list__text:active .menu__bloc__list__text__descip {
   padding-right: 4.5rem;
-  transition: 800ms ease-in-out;
+  transition: 500ms ease-in-out;
 }
 .menu__bloc__list__text:hover .menu__bloc__list__text__descip__text, .menu__bloc__list__text:active .menu__bloc__list__text__descip__text, .menu__bloc__list__text:focus .menu__bloc__list__text__descip__text {
   white-space: nowrap;
@@ -518,11 +524,11 @@ li {
   display: flex;
   justify-content: flex-end;
   transform: translateX(0rem);
-  transition: transform 800ms ease-in-out;
+  transition: transform 500ms ease-in-out;
 }
 .menu__bloc__list__text__descip {
   margin-right: 0rem;
-  transition: transform 800ms ease-in-out;
+  transition: transform 500ms ease-in-out;
 }
 
 .menu__bloc__list__text--load1 {
@@ -583,7 +589,7 @@ li {
   align-items: center;
   font-size: 1.5rem;
   transform: rotate(-1turn);
-  transition: transform 800ms ease-in-out;
+  transition: transform 500ms ease-in-out;
 }
 
 /*# sourceMappingURL=style.css.map */

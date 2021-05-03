@@ -1,7 +1,9 @@
+/*header*/
 .header a {
   display: initial;
 }
 
+/*banner*/
 .banner {
   background: white;
   border-radius: 1rem;
@@ -36,6 +38,7 @@
   }
 }
 
+/*Menu*/
 .menu {
   background-color: $colour-bg;
   display: flex;
@@ -89,8 +92,8 @@
     &:hover .fa-check-circle,
     &:active .fa-check-circle,
     &:focus .fa-check-circle {
-      transform: rotate(1turn);
-      transition: transform  $time-check 100ms ease-in-out;
+      transform: rotate(1turn); //check icon rotation
+      transition: transform  $time-check 100ms ease-in-out; 
     }
     &:hover .menu__bloc__list__text__descip,
     &:focus .menu__bloc__list__text__descip,
@@ -124,6 +127,7 @@
   }
 }
 
+/*Menu loading animation*/
 .menu__bloc__list__text--load1 {
   animation: loadtext $time-menu-display linear forwards 100ms;
 }

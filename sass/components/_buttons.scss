@@ -10,7 +10,7 @@
   padding-bottom: 0.8rem;
   padding-top: 0.8rem;
   font-size: 1.1rem;
-  transition: box-shadow 250ms;
+  transition: box-shadow $time-box-Shadow; //animation
   &:focus,
   &:hover,
   &:active {
@@ -36,22 +36,21 @@
   &:hover .like-color,
   &:focus .like-color,
   &:active .like-color {
-  transition: opacity $time-like ease-in-out;
+  transition: opacity $time-like ease-in-out; //animation
   }
-  .like-color {
+  .like-color { //icon color
     opacity: 0;
-    position: absolute;
+    position: absolute; //postion
     left: 0;
     background: linear-gradient(
       to bottom,
       $colour-primary 0%,
       $colour-secondary 100%
     );
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-color: transparent;
-    
+    -webkit-background-clip: text;//Background is apply to the text
+    -moz-background-clip: text;//Background is apply to the text
+    -webkit-text-fill-color: transparent; //inside
+    -webkit-text-stroke-color: transparent; //border
     &:focus,
     &:hover,
     &:active {
@@ -59,8 +58,8 @@
       opacity: 1;
     }
   }
-  .like-border {
+  .like-border { //icon original border
     opacity: 1;
-    transition: opacity $time-like ease-in-out;
+    transition: opacity $time-like ease-in-out; //animation
   }
 }

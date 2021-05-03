@@ -18,7 +18,7 @@
   height: 100%;
   background: $colour-primary;
   z-index: 200;
-  animation: hide-loader 0s $time-loader both;
+  animation: hide-loader 0s $time-loader both; //hide loader
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,7 +44,7 @@
         border-radius: 50%;
         border: 6px solid $colour-secondary;
         border-color: $colour-secondary transparent $colour-secondary transparent;
-        animation: dual-ring 1s linear infinite;
+        animation: dual-ring 1s linear infinite; //animation
       }
     }
     &__text {

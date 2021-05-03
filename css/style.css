@@ -398,6 +398,7 @@ li {
   grid-row: 1/span 2;
 }
 
+/*Sticker nouveau*/
 .preview__new {
   grid-column: 2;
   grid-row: 1;
@@ -417,10 +418,12 @@ li {
   display: none;
 }
 
+/*header*/
 .header a {
   display: initial;
 }
 
+/*banner*/
 .banner {
   background: white;
   border-radius: 1rem;
@@ -456,6 +459,7 @@ li {
   font-size: 1.8rem;
 }
 
+/*Menu*/
 .menu {
   background-color: #f6f6f6;
   display: flex;
@@ -531,6 +535,7 @@ li {
   transition: transform 500ms ease-in-out;
 }
 
+/*Menu loading animation*/
 .menu__bloc__list__text--load1 {
   animation: loadtext 300ms linear forwards 100ms;
 }

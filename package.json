@@ -4,7 +4,7 @@
   "description": "This is my \"projet 3\" for openClassroom",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/style.scss:./style.css"
+    "sass": "sass --watch ./sass/style.scss:./css/style.css"
   },
   "repository": {
     "type": "git",
@@ -17,3 +17,4 @@
   },
   "homepage": "https://github.com/Syl20cros/SylvainCros_3_08042021#readme"
 }
+
